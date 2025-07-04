@@ -1,0 +1,85 @@
+<odoo>
+  <record id="action_student" model="ir.actions.act_window">
+    <field name="name">Students</field>
+    <field name="res_model">my.school.student</field>
+    <field name="view_mode">list,form</field>
+  </record>
+  <record id="view_form_student" model="ir.ui.view">
+    <field name="name">student.form</field>
+    <field name="model">my.school.student</field>
+    <field name="arch" type="xml">
+      <form string="Student">
+        <group>
+          <field name="name"/>
+          <field name="age"/>
+          <field name="course_id"/>
+        </group>
+      </form>
+    </field>
+  </record>
+
+  <record id="view_list_student" model="ir.ui.view">
+    <field name="name">student.list</field>
+    <field name="model">my.school.student</field>
+    <field name="arch" type="xml">
+      <list string="Student List">
+        <field name="name"/>
+        <field name="age"/>
+        <field name="course_id"/>
+      </list>
+    </field>
+  </record>
+
+  <record id="view_kanban_student" model="ir.ui.view">
+    <field name="name">student.kanban</field>
+    <field name="model">my.school.student</field>
+    <field name="arch" type="xml">
+      <kanban class="o_kanban_example" create="true">
+        <field name="name"/>
+        <field name="age"/>
+        <field name="course_id"/>
+
+        <templates>
+          <t t-name="kanban-box">
+            <div class="oe_kanban_global_click o_kanban_card">
+              <div class="o_kanban_primary_center">
+                <strong><field name="name"/></strong>
+              </div>
+              <div>Age: <field name="age"/></div>
+              <div>Course: <field name="course_id"/></div>
+            </div>
+          </t>
+        </templates>
+      </kanban>
+    </field>
+  </record>
+      
+</odoo>
+
+<!-- <odoo>
+  <record id="view_form_student" model="ir.ui.view">
+    <field name="name">student.form</field>
+    <field name="model">my.school.student</field>
+    <field name="arch" type="xml">
+      <form string="Student">
+        <group>
+          <field name="name"/>
+          <field name="age"/>
+          <field name="course_id"/>
+        </group>
+      </form>
+    </field>
+  </record>
+
+  <record id="view_list_student" model="ir.ui.view">
+    <field name="name">student.list</field>
+    <field name="model">my.school.student</field>
+    <field name="arch" type="xml">
+      <list string="Student List">
+        <field name="name"/>
+        <field name="age"/>
+        <field name="course_id"/>
+      </list>
+    </field>
+  </record>
+</odoo> -->

@@ -1,0 +1,18 @@
+<odoo>
+
+    <!-- Menu Structure -->
+    <menuitem id="menu_school_root" name="School"/>
+    <menuitem id="menu_student" name="Students" parent="menu_school_root" action="action_student"/>
+
+    <!-- Menu Structure -->
+    <menuitem id="menu_course" name="Courses" parent="menu_school_root" action="action_course"/>
+    <!-- <menuitem id="menu_school_root" name="School"/>
+    <menuitem id="menu_student" name="Students" parent="menu_school_root"/>
+    <act_window id="action_student"name="Students" res_model="my.school.student" view_mode="tree,form" menu_id="menu_student"/>
+
+    <menuitem id="menu_course" name="Courses" parent="menu_school_root"/>
+    <act_window id="action_course" name="Courses" res_model="my.school.course" view_mode="tree,form" menu_id="menu_course"/> -->
+</odoo>
+
+
+
